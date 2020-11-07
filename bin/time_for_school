@@ -18,3 +18,18 @@ some_knowledge = avi.teach
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Cricket"
+#puts "Jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi"
+
+#jim.learn(some_knowledge)
+# What happens when you try to call #learn on jim?
+# bin/time_for_school:27:in `<main>': undefined method `learn' for #<User:0x0000559a13617aa8> (NoMethodError)
+
+lisa = Student.new
+lisa.first_name = "Lisa"
+lisa.last_name = "Turtle"
+lisa.learn(some_knowledge)
+puts "Lisa just learned this important knowledge: '#{lisa.knowledge.first}' from Avi"
